@@ -3,6 +3,9 @@
 version: '3'
 
 tasks:
+  compile_shader:
+    cmds:
+      - 'shadercross ./shaders/source/Draw3DWireframes.vert.hlsl --source HLSL --dest MSL --stage vertex --entrypoint main --output ./shaders/compiled/Draw3DWireframes.vert.msl'
   build:
     desc: 'run CMAKE build command'
     cmds:

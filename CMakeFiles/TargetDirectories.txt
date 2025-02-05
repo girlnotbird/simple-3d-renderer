@@ -1,3 +1,0 @@
-/Users/robinmccollum/home/dev/TheBadDecade/CMakeFiles/Application.dir
-/Users/robinmccollum/home/dev/TheBadDecade/CMakeFiles/edit_cache.dir
-/Users/robinmccollum/home/dev/TheBadDecade/CMakeFiles/rebuild_cache.dir
