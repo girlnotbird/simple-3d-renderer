@@ -1,0 +1,32 @@
+# VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# Other IDEs
+.idea/*
+
+# Private Node Modules
+node_modules/
+
+# Mac/OSX
+.DS_Store
+
+# Distribution / Packaging
+__Build/
+__Notes/
+build/
+dist/
+downloads/
+lib/
+
+# Environments
+.env
+env/
+ENV/
+
+# External dependencies
+vendored/*

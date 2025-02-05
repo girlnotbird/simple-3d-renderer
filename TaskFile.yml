@@ -1,0 +1,42 @@
+# https://taskfile.dev
+
+version: '3'
+
+tasks:
+  build:
+    desc: 'run CMAKE build command'
+    cmds:
+      - 'cmake -DCMAKE_BUILD_TYPE=Debug -G "Ninja" -S {{.ROOT_DIR}} -B {{.ROOT_DIR}}/build'
+      # - 'cmake --build {{.ROOT_DIR}}/build --target RunTests -- -j 14'
+      - 'cmake --build {{.ROOT_DIR}}/build --target Application -- -j 14'
+
+  run:
+    desc: 'run Application from build dir'
+    cmds:
+      - '{{.ROOT_DIR}}/build/build/Application'
+
+  run:debug:
+    desc: 'run lldb-mi from cpp-tools VS Code Extension, run Application'
+    cmds:
+      - 'lldb --arch x86_64 -- {{.ROOT_DIR}}/build/build/Application'
+
+  test:list:
+    desc: 'lists unit tests'
+    cmds:
+      - task: test:generic
+        vars: { CLI_ARGS: "list" }
+
+  test:all:
+    desc: 'runs all unit tests'
+    cmds:
+      - task: test:generic
+        vars: { CLI_ARGS: "" }
+
+  test:
+    desc: 'runs test framework CLI (default: all)'
+    cmds:
+      - task: test:generic
+
+  test:generic:
+    cmds:
+      - './build/RunTests {{.CLI_ARGS}}'

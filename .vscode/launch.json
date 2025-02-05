@@ -1,0 +1,23 @@
+{
+  "configurations": [
+    {
+      "name": "(lldb) Debug",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${command:cmake.launchTargetPath}",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [
+        {
+          "name": "PATH",
+          "value": "${env:PATH}:${command:cmake.getLaunchTargetDirectory}"
+        }
+      ],
+      "externalConsole": true,
+      "miDebuggerPath": "/Users/robinmccollum/.vscode/extensions/ms-vscode.cpptools-1.23.5-darwin-x64/debugAdapters/lldb-mi/bin/lldb-mi",
+      "MIMode": "lldb"
+    }
+  ],
+  "version": "1"
+}
