@@ -1,5 +1,7 @@
 # VSCode
+.vscode
 .vscode/*
+.vscode/**/*
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
@@ -7,7 +9,9 @@
 *.code-workspace
 
 # Other IDEs
+.idea
 .idea/*
+.idea/**/*
 
 # Private Node Modules
 node_modules/
@@ -31,3 +35,8 @@ ENV/
 # External dependencies
 vendored/*
 libs/*
+
+# Cmake cache files
+.cmake/*
+.cmake/**/*
+.cmake
